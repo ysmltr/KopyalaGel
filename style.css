@@ -58,6 +58,25 @@ footer {
     bottom: 10px;
     left: 0;
     right: 0;
-    font-size: 14px;
-    color: #333;
+    font-size: 14px; /* Yazı boyutu */
+    color: #333; /* Yazı rengi */
+    padding: 10px;
 }
+
+/* Mobil cihazlar için (768px ve daha küçük ekranlar) */
+@media (max-width: 768px) {
+    footer {
+        font-size: 12px; /* Daha küçük ekranlar için yazı boyutunu küçült */
+        padding: 15px; /* Mobilde biraz daha boşluk ekle */
+        bottom: 5px; /* Daha az boşluk bırak */
+    }
+}
+
+/* Daha küçük ekranlar (480px ve daha küçük ekranlar) */
+@media (max-width: 480px) {
+    footer {
+        font-size: 11px; /* Çok küçük ekranlar için daha küçük yazı boyutu */
+        padding: 20px; /* Daha fazla boşluk bırak */
+    }
+}
+
