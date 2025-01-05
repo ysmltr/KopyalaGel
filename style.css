@@ -10,7 +10,7 @@
 body {
     font-family: 'Plus Jakarta Sans', sans-serif;
     background: #f6f8ff;
-    min-width: 500px;
+    min-width: 450px;
     max-width: 100%;
     display: flex;
     flex-direction: column;
