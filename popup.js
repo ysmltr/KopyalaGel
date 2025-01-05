@@ -1,21 +1,23 @@
-// Tüm kopyalanabilir kutuları seç
-const copyBoxes = document.querySelectorAll(".copy-box");
+document.addEventListener('DOMContentLoaded', () => {
+    const copyBoxes = document.querySelectorAll('.copy-box');
 
-// Kutulara tıklama olayını ekle
-copyBoxes.forEach(box => {
-    box.addEventListener("click", () => {
-        const textToCopy = box.innerText;
-
-        // Metni panoya kopyala
-        navigator.clipboard.writeText(textToCopy).catch(err => {
-            console.error("Kopyalama başarısız:", err);
+    copyBoxes.forEach(box => {
+        box.addEventListener('click', async () => {
+            const text = box.textContent;
+            
+            try {
+                await navigator.clipboard.writeText(text);
+                // Just add the copy animation
+                box.classList.add('copy-animation');
+                
+                // Remove animation after delay
+                setTimeout(() => {
+                    box.classList.remove('copy-animation');
+                }, 300);
+                
+            } catch (err) {
+                console.error('Failed to copy text: ', err);
+            }
         });
-
-        // Tıklanan kutuya "active" sınıfı ekle
-        copyBoxes.forEach(item => item.classList.remove("active"));
-        box.classList.add("active");
-
-        // Aktif sınıfı bir süre sonra kaldır
-        setTimeout(() => box.classList.remove("active"), 1000);
     });
 });
