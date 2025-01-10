@@ -18,11 +18,12 @@ body {
     padding: 0;
     margin: 0;
     min-height: 100vh;
+    overflow: hidden;
 }
 
 /* Typography */
 h1 {
-    font-size: 28px;
+    font-size: 24px;
     background: linear-gradient(135deg, #1a237e 0%, #3f51b5 100%);
     -webkit-background-clip: text;
     background-clip: text;
@@ -30,13 +31,13 @@ h1 {
     margin: auto;
     font-weight: 700;
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 8px;
     letter-spacing: -0.5px;
-    margin-top: 40px;
+    margin-top: 20px;
 }
 h6{
      
-        font-size: 18px;
+        font-size: 16px;
         background: linear-gradient(135deg, #1a237e 0%, #3f51b5 100%);
         font-style: italic;
         -webkit-background-clip: text;
@@ -45,26 +46,26 @@ h6{
         font-family: Arial, Helvetica, sans-serif;
         font-weight: 500;
         text-align: center;
-        margin-bottom: 5px;
+        margin-bottom: 15px;
         letter-spacing: -0.5px;
-        margin-top: 5px;
+        margin-top: 0;
     
 }
 
 /* Main Container */
 .character-container {
-    width: 500px;
+    width: 320px;
     display: flex;
     flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
-    gap: 16px;
-    padding: 30px;
+    gap: 12px;
+    padding: 20px;
     background: rgba(255, 255, 255, 0.9);
-    border-radius: 24px;
-    box-shadow: 0 20px 40px rgba(63, 81, 181, 0.15),
+    border-radius: 16px;
+    box-shadow: 0 8px 16px rgba(63, 81, 181, 0.15),
                 0 1px 3px rgba(63, 81, 181, 0.1);
-    margin: 20px auto;
+    margin: 10px auto;
     transition: all 0.3s ease;
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.8);
